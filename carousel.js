@@ -56,3 +56,19 @@ processBtn.addEventListener("click", () => {
 
     outputText.value = result;
 });
+normalizeKeyInput(key1);
+normalizeKeyInput(key2);
+normalizeKeyInput(key3);
+function normalizeKeyInput(input) {
+    input.addEventListener("input", () => {
+        let value = input.value;
+
+        value = value.replace(/[^0-9]/g, "");
+
+        if (value.length > 1) {
+            value = value.slice(0, 1);
+        }
+
+        input.value = value;
+    });
+}
