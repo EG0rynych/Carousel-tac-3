@@ -92,7 +92,14 @@ button:hover {
 #copyBtn {
     width: 100%;
 }
+textarea {
+    font-size: 16px;
+    line-height: 1.4;
+}
 
+input {
+    font-size: 16px;
+}
 @media (min-width: 768px) {
     textarea {
         height: 150px;
