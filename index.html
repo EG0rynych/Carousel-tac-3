@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карусель | Cipher</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Карусель</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -13,8 +13,12 @@
 
     <div class="mode-switch">
         <label>
-            <input type="checkbox" id="modeToggle">
-            <span id="modeLabel">Режим: Шифрование</span>
+            <input type="radio" name="mode" value="encrypt" checked>
+            Шифрование
+        </label>
+        <label>
+            <input type="radio" name="mode" value="decrypt">
+            Дешифрование
         </label>
     </div>
 
@@ -26,9 +30,14 @@
 
     <textarea id="inputText" placeholder="Введите текст..."></textarea>
 
-    <button id="processBtn">Обработать</button>
+    <div class="buttons-row">
+        <button id="clearBtn">Очистить🗑️</button>
+        <button id="processBtn">Обработать✅</button>
+    </div>
 
     <textarea id="outputText" placeholder="Результат..." readonly></textarea>
+
+    <button id="copyBtn">Копировать📄</button>
 </div>
 
 <script src="carousel.js"></script>
